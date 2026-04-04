@@ -9,7 +9,8 @@ public class MongoDbContext
 
     public MongoDbContext(IConfiguration configuration)
     {
-        var client = new MongoClient(configuration.GetConnectionString("MongoDb"));
+        var config = configuration;
+        var client = new MongoClient();
         _database = client.GetDatabase("SocialNetworkDb");
     }
 

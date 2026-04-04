@@ -1,11 +1,7 @@
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+namespace RedisLock.Contracts.Requests;
 
-namespace RedisLock.Infrastructure.Persistence.Entities;
-
-public class MemberProfile
+public class MemberCreateRequest
 {
-    public ObjectId Id { get; set; }
     public int MemberId { get; set; }
     public string Username { get; set; }
     public string Name { get; set; }

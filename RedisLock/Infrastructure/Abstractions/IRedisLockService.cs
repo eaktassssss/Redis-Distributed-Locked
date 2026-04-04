@@ -1,6 +1,9 @@
+using StackExchange.Redis;
+
 namespace RedisLock.Infrastructure.Abstractions;
 
 public interface IRedisLockService
 {
-    // bu servis lock işlemini ve lock bırakma işlemini gerçekleştirecek.
+    Task<bool> TryAcquireLock(string key, string token, TimeSpan expiry);
+    Task ReleaseLock(string key, string token);
 }

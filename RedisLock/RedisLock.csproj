@@ -15,8 +15,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Contracts\Responses\" />
       <Folder Include="Controllers\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

@@ -22,7 +22,7 @@ public class RedisLockAttribute : Attribute, IAsyncActionFilter
         var lockKey = GenerateLockKey(context);
         var token = Guid.NewGuid().ToString();
 
-        var isLocked = await lockService.TryAcquireLock(lockKey, token, TimeSpan.FromMinutes(5)); 
+        var isLocked = await lockService.TryAcquireLock(lockKey, token, TimeSpan.FromSeconds(30)); 
 
         if (!isLocked)
         {
